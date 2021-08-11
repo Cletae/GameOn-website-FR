@@ -12,7 +12,12 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 
-
+// Form Elements
+const firstName = document.getElementById("first");
+const lastName = document.getElementById("last");
+const mail = document.getElementById("email");
+const birth = document.getElementById("birthdate");
+const participation = document.getElementById("quantity");
 
 
 // launch modal event
