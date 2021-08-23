@@ -68,43 +68,6 @@ img {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
-  .topnav a {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .topnav.responsive {
-    position: relative;
-  }
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-@media screen and (max-width: 540px) {
-  .topnav a {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
-}
-
 main {
   font-size: 130%;
   font-weight: bolder;
@@ -228,7 +191,7 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/* 
+/*
 input[data-error]::after {
     content: attr(data-error);
     font-size: 0.4em;
@@ -480,7 +443,60 @@ footer {
   padding-right: 2vw;
   margin: 0 20px;
 }
-@media screen and (max-width: 800px) {
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Querries */
+@media screen and (max-width: 540px) {
+  .topnav a {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+    margin-top: -15px;
+  }
+}
+
+/* Modification affichage */
+
+/* Modification max-width 840px au lieu de 768px*/
+@media screen and (max-width: 840px) {
+  .topnav a {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* Modification max-width 965px au lieu de 800 */
+@media screen and (max-width: 965px) {
   .hero-section {
     display: block;
     box-shadow: unset;
@@ -519,13 +535,33 @@ footer {
   }
 }
 
-@keyframes modalopen {
-  from {
-    opacity: 0;
-    transform: translateY(-150px);
+/* Image main */
+.hero-img img {
+  object-fit: cover;
+}
+
+.hero-content {
+  padding: 50px 70px;
+}
+
+/* Version mobile */
+@media screen and (min-width: 375px) and (max-width: 540px) {
+  .topnav a.icon {
+    margin-top: 5px;
   }
-  to {
-    opacity: 1;
+
+  .hero-content {
+    padding: 0;
+  }
+
+  .hero-headline {
+    font-size: 2.5rem;
+    max-width: 80%;
+    padding-left: 0;
+  }
+
+  .hero-text {
+    max-width: 80%;
+    padding-left: 0;
   }
 }
-/*# sourceMappingURL=modal.css.map */
