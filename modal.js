@@ -33,8 +33,7 @@ const emptyCheckbox = document.getElementById("checkbox-empty");
 
 // Regex
 const regexName = /^[a-zA-Z\-àâçéèêëîïôûùüÿñæœ']{1}$/;
-const regexEmail =
-  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const regexEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 // const regexParticipation = /^([0-9]|[1-9][0-9]|100)$/;
 
 // launch modal event
